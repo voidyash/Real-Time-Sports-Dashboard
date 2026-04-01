@@ -2,15 +2,15 @@ const { google } = require("googleapis");
 
 // AUTH SETUP
 const auth = new google.auth.GoogleAuth({
-    keyFile: "config/credentials.json",
-    scopes: ["https://www.googleapis.com/auth/spreadsheets.readonly"] 
+    keyFile: "put-your-key-googlekey-file-here",
+    scopes: ["put-your-scope"] 
 });
 
 // CREATE SHEET INSTANCE
 const sheets = google.sheets({version: "v4", auth});
 
 // SPREADSHEET ID
-const SPREADSHEET_ID = "1wf32jRYWpADdeEsee0sbgnIPedn7hKMSQ7GJcAg7yJI";
+const SPREADSHEET_ID = "your-sheet-id-here";
 
 async function getSheetData() {
     const response= await sheets.spreadsheets.values.get({
