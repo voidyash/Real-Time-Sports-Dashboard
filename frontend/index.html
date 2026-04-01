@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Live Scoreboard</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class = "container">
+        <div class="header-row">
+            <div class = "rank">RANK</div>
+            <div class = "team">TEAM</div>
+            <div class = "players">ALIVE</div>
+            <div class = "elims">ELIMS</div>
+        </div>
+        
+        <div id = "scoreboard"></div>
+
+        <div class = "legend">
+            <div class = "legend-item">
+                <span class = "box alive"></span> ALIVE
+            </div>
+            <div class="legend-item">
+                <span class = "box knocked"></span> KNOCKED
+            </div>
+            <div class="legend-item">
+                <span class = "box dead"></span> DEAD
+            </div>
+        </div>
+    </div>
+
+    <!-- SOCKET IO CLIENT -->
+     <script src="http://localhost:3000/socket.io/socket.io.js"></script>
+     <script src="script.js"></script>
+</body>
+</html>
